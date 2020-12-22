@@ -61,6 +61,11 @@
     {{- parent() -}}
 {%- endblock range_widget %}
 
+{% block button_widget -%}
+    {% set attr = attr|merge({class: (attr.class|default('') ~ ' uk-button')|trim}) %}
+    {{- parent() -}}
+{%- endblock button_widget %}
+
 {# Labels #}
 
 {# Rows #}
